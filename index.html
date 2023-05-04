@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template signature StudyAdvisor</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 50vh;
+    "
+  >
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        gap: 0.5em;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <label for="first_name">Prénom</label>
+        <input
+          style="width: 100%"
+          type="text"
+          name="first_name"
+          id="first_name"
+          placeholder="Jane"
+        />
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <label for="last_name">Nom de famille</label>
+        <input
+          style="width: 100%"
+          type="text"
+          name="last_name"
+          id="last_name"
+          placeholder="Doe"
+        />
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <label for="phone"
+          >Numéro de téléphone au format XX XX XX XX XX XX</label
+        >
+        <input
+          style="width: 100%"
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="06 90 61 61 61"
+        />
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <label for="job">Nom du poste</label>
+        <input
+          style="width: 100%"
+          type="text"
+          name="job"
+          id="job"
+          placeholder="Account manager . . ."
+        />
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <label for="url">Lien vers l'image</label>
+        <input
+          style="width: 100%"
+          type="text"
+          name="url"
+          id="url"
+          placeholder="https://imgur..."
+        />
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <label for="email">Email</label>
+        <input
+          style="width: 100%"
+          type="text"
+          name="email"
+          id="email"
+          placeholder="name.last@studyadvisor.fr"
+        />
+      </div>
+      <button onclick="download()">Télécharger la signature!</button>
+    </div>
+
+    <div style="width: 40vw">
+      <p>Preview :</p>
+
+      <div id="preview">
+        <div>
+          <table
+            style="
+              font-family: Montserrat, Verdana;
+              border-spacing: 0;
+              width: auto;
+              border-collapse: initial;
+              border-radius: 8px;
+              background-color: #fff;
+              overflow: hidden;
+            "
+            bgcolor="#fff"
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    word-break: normal;
+                    width: 100%;
+                    height: 0px;
+                    background-color: #f65560;
+                    margin: 0;
+                  "
+                  width="100%"
+                  height="0"
+                  bgcolor="#f65560"
+                ></td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    word-break: normal;
+                    padding: 0;
+                  "
+                >
+                  <table
+                    style="
+                      border-spacing: 0;
+                      width: auto;
+                      border-collapse: initial;
+                    "
+                  >
+                    <tbody>
+                      <tr>
+                        <td
+                          style="
+                            border-color: inherit;
+                            text-align: left;
+                            font-family: Arial, sans-serif;
+                            font-size: 14px;
+                            overflow: hidden;
+                            word-break: normal;
+                            padding: 20px;
+                          "
+                          align="left"
+                        >
+                          <table
+                            style="
+                              border-collapse: collapse;
+                              border-spacing: 0;
+                              width: 155px;
+                            "
+                            width="155"
+                          >
+                            <tbody>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <h3
+                                    color="#000000"
+                                    style="
+                                      margin: 0px;
+                                      font-size: 17px;
+                                      color: #f65661;
+                                      letter-spacing: 1px;
+                                      line-height: 19px;
+                                    "
+                                  >
+                                    <span id="templateFirstName">Lïlo</span>
+                                    <span id="templateLastName">Ruby</span>
+                                  </h3>
+                                  <p
+                                    color="#000000"
+                                    font-size="medium"
+                                    style="
+                                      margin: 3px 0 3px 0;
+                                      color: #a1dcf7;
+                                      font-size: 12px;
+                                      font-style: italic;
+                                      font-weight: 600;
+                                    "
+                                  >
+                                    <span id="templateJob">Alternant.e</span>
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="4"
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <table
+                                    style="
+                                      border-collapse: collapse;
+                                      border-spacing: 0;
+                                    "
+                                  >
+                                    <tbody>
+                                      <tr>
+                                        <td
+                                          style="
+                                            border-color: inherit;
+                                            text-align: left;
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            overflow: hidden;
+                                            word-break: normal;
+                                          "
+                                          align="left"
+                                        >
+                                          <img
+                                            color="#f2547d"
+                                            width="13"
+                                            style="padding-top: 5px"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAYAAAARfGZ1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKuSURBVHgBtVU9U9tAEN3dkx3R+Q9kxsakBpn0ETN8JBXkFyAIqaFMh1OmwxVh+LCoUoZ0YDNBdFTY9IFROkqnICODdZc9MeNIxA6xPHmFLd2d3u67fbeHEIM57dhAZIOUXnDsejAkRJd4dnkdkFwFmEOkd0bRgs5l4xSGAHWJAcugaKld27VCRRYHWbsfHyJzc2bZAcQNTRzUt109KK/Or2n0+REifMwULTOtAiHGSlUE3ArqOxvxiXgAY8xqh5eNMxgQhAATIMHrNXlX324iqApKnIcUIAXQkqRy/RYg0DxXxoc05KigiajyvSbNueWqApkDDN9DChCgOu0l25x7UwUF7Hs5FRy6PqQACSUPWLttTq/YiRkJef7dT0sckd/U3SZn6IFQi4kZhbwVuJ6ZeTsBKUFdIgVOPPvgeMdTCioC5eec7eQgBShOxPufOJHtu7Cs3dTOipM0AbD7xB+bWWrwkxvU9rruMF86eZB0wgetpW7D14H3uwY6YJClVVZus/z9oL7n/pF5BM9tMcmS7jGJ7dEFZcdI/cIKTJuD6aD8384aOugC2/WCW0j1YS8S8ZfO1bmfKVg/FMGmPvq6BUTj35otPv5bYrRUQIM+GWOlPAgqs+zgyW04dfPVPTBGre+6R8W7aYL8PkDjLFOcHOGDlQigEV41Do3C5KlCcPjwXZt34auWVnz/XfNhAIQ+MGdXuJhqlaMv/aztHsA/QluXHdYAiVOi36LO5bmnFbBbNge5OLTSTLE0wc4bwccWR8UlWY2Mxfsbd0vvzB3OXPw9864CLrLxbPwLXyYFLmJVF9N4On7R8ZutXsSEQjvoA98P7qOZJ1REnhdlflyMWgZ7G5T0oQO+MmiBe+w6E1eC2o5eAwORx4NgKNYkwovosomgfIVUaR8lb7T/hl+cQzuRx+ldkQAAAABJRU5ErkJggg=="
+                                          />
+                                        </td>
+                                        <td
+                                          style="
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            overflow: hidden;
+                                            word-break: normal;
+                                          "
+                                        >
+                                          <a
+                                            id="linkPhone"
+                                            href="tel:${phone}"
+                                            color="#084663"
+                                            style="
+                                              text-decoration: unset !important;
+                                              color: #084663;
+                                              font-size: 10px;
+                                              font-weight: 400;
+                                              padding-left: 4px;
+                                            "
+                                            target="_blank"
+                                          >
+                                            <span id="templatePhone"
+                                              >06 07 08 09 10 11</span
+                                            >
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <table
+                                    style="
+                                      border-collapse: collapse;
+                                      border-spacing: 0;
+                                      width: 200px;
+                                    "
+                                    width="200"
+                                  >
+                                    <tbody>
+                                      <tr>
+                                        <td
+                                          style="
+                                            border-color: inherit;
+                                            text-align: left;
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            overflow: hidden;
+                                            word-break: normal;
+                                          "
+                                          align="left"
+                                        >
+                                          <img
+                                            color="#f2547d"
+                                            width="13"
+                                            style="padding-top: 6px"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGMSURBVHgB7ZRdTsJQEIVnpgjXty4BdiArsCZSnt1BQ3kHViCuABbAT12B+CY/CbgCcAWwixZNO85tKCoaK7G++SVNb9s7Z86c3BTVZd1i4jsEMCErEDy1DVs5IB4iwwqQHyEjmLHhF+gpJ+siE462434bMsC0HNPPGw0xbJJ+gcxNVXWHynKK8AvUpWOJ8DqJOBZngJHMYkHemKtKzYEj0W4Ldq0DZMzjiAE2e3Fxfg8UXUgTyR6HhWq9owt+IqzdBnljKUuHEVvBtH8hbt/ENcGDt9lO+lcYcUumcHRBWkyJWy2GFJW34173/Xc6LPBngy5SWI7DkvyUXbs+3HNScc5O7foSAZuJW23ucB995UhvDCaDkgR2I1db2e46maJQcRuExpwhMkMOP7lNFd83mfTaQGEpmeLUdpeI0CWGW/UclV+m3uq7+hyksBu3pE8RA54DY8uf9RY+pJMqvm8yHXhy8+AICP6Qf/GPIBTjm6q4c3mw5LhtIDOwGDKVUS/jn9WuWyZEtAjkuL4CLC+fAFyFoe8AAAAASUVORK5CYII="
+                                          />
+                                        </td>
+                                        <td
+                                          style="
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            overflow: hidden;
+                                            word-break: normal;
+                                          "
+                                        >
+                                          <a
+                                            id="mailToTemplate"
+                                            href="mailto:${email}"
+                                            color="#084663"
+                                            style="
+                                              text-decoration: unset !important;
+                                              color: #084663;
+                                              font-size: 10px;
+                                              font-weight: 400;
+                                              padding-left: 4px;
+                                            "
+                                            target="_blank"
+                                          >
+                                            <span id="templateEmail"
+                                              >prenom.nom@studyadvisor.fr</span
+                                            >
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <table
+                                    style="
+                                      border-collapse: collapse;
+                                      border-spacing: 0;
+                                    "
+                                  >
+                                    <tbody>
+                                      <tr>
+                                        <td
+                                          style="
+                                            border-color: inherit;
+                                            text-align: left;
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            overflow: hidden;
+                                            word-break: normal;
+                                          "
+                                          align="left"
+                                        >
+                                          <img
+                                            color="#f2547d"
+                                            width="13"
+                                            style="padding-top: 5px"
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAYAAAARfGZ1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOPSURBVHgBxVVLUttAEO0eGVtUNs4JECcAThBRBaYqG3wDDGaPOYHhBMAesLmB2aQSoApzgpgTxJwgzoYIG03n9ciShePgZabKH8309Of16yemOcsPawEtUEhsAn0WSwMm2/NfqTfotgfv3eVZm+WwVo6K5kCIqzBYfed2m17i46jb7s86NtMb/kYtjIredyFqwPHj2MsxieziT59MvIz8++6D6FT0fpS29k80oXedlzbrB2S8exa6XhzaZQRY0eyim/Oj1Cb6iiyNXYffMlluazAWW9WEHISznKtjZjpFNt3SKD6KCrTqIOH4eDojDcAkZ8TSdMGE1CZAFff5ChzmGlEQGc47KD/EduAgwC1D9tCiicLeCs4bNIzXqUABk1kVwycJRLBHUggWCJvOy7fzw4nzrXqLLAXR7cV6gvt+SEbuAUsPGZbHwbIlJGAMpUx58oe2qsxJ7wGu9ejuvFtwOAnVyNNGpesVH49ebi7W0h1/c69GzM3o5iKzK23sNZh5O6WkOvQr9SuFC49dIwvc0JIcdllmKBlZ05wlwn3hKapqk5lCxd4AOzBCHvLnbEib8jTPuVmIARuV/c/1pXRPs0dig+eiFxqNbImnspQAzfs5z3kU0b8mtM9oLgMjAWd7LJIZakDXMFHGpOVQgIzKaPDEIWBRCBxT8qm5+3JWSO7Za6KJIzTJAYq/V5MrHOJre8zp1E2yr7DmEmHiQH8L4zHuR7eX7fTQr+yqUAmYMdnb3NOgn/J2hKb5Ra9FBW5FXy6yHpUqmHSmASZUHlDClDiBBUIfac76oFOpgZ/jX/mAOtkcm54BQF3LZueN8KASVl2Zs0aeF2jleen1F0xV99wQRSPbKRW9k98lU8PZqbPwbJes11KFNKClFSoLhoWUdpW9I4i6gxJzto3WPL4tmjFA7Hrlxn8Rk2YNN3kYr6luiPEOcFBNilB2gBWJ8aoyA60u53QeVXJHhq9nVDQ7eK6paibilpazWb9XWqkzkP9KHcDRUqY3U+OvVak8i5VDlQBHSZeN7KZNn+i5F+8qVkabOYpPo2HcUL46MZq12Guq1r/cXZ7qrzgh4+M8mzLn6UvA6gN0WRvjNNtIa/olANybwmBYzFdOUQmvO4bj3Eslw3x6+ZV9GNmd8XGguCbySxA06QDjRmaMHsQUH45u238J3UznutxLGtknLJGQ9bVGkwYboQcwpaOUo/+x/gD4A7EQyKfHLgAAAABJRU5ErkJggg=="
+                                          />
+                                        </td>
+                                        <td
+                                          style="
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            overflow: hidden;
+                                            word-break: normal;
+                                          "
+                                        >
+                                          <a
+                                            href="https://www.studyadvisor.fr"
+                                            color="#084663"
+                                            target="_blank"
+                                            style="
+                                              text-decoration: unset !important;
+                                              color: #084663;
+                                              font-size: 10px;
+                                              font-weight: 400;
+                                              padding-left: 4px;
+                                            "
+                                          >
+                                            <span>studyadvisor.fr</span>
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="9"
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <table
+                                    style="
+                                      border-collapse: collapse;
+                                      border-spacing: 0;
+                                    "
+                                  >
+                                    <tbody>
+                                      <tr>
+                                        <td
+                                          style="
+                                            border-color: inherit;
+                                            text-align: left;
+                                            font-family: Arial, sans-serif;
+                                            font-size: 14px;
+                                            overflow: hidden;
+                                            word-break: normal;
+                                          "
+                                          align="left"
+                                        >
+                                          <a
+                                            href="https://www.studyadvisor.fr"
+                                            target="_blank"
+                                          >
+                                            <img
+                                              src="https://studyadv.s3.eu-west-1.amazonaws.com/email_signature/StudyAdvisor_logo.png"
+                                              alt="Study Advisor logo"
+                                              style="width: 110px"
+                                            />
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td
+                          style="
+                            border-color: inherit;
+                            text-align: left;
+                            font-family: Arial, sans-serif;
+                            font-size: 14px;
+                            word-break: normal;
+                            padding: 0 0 0 0;
+                            vertical-align: bottom;
+                            overflow: visible;
+                          "
+                          valign="bottom"
+                          align="left"
+                        >
+                          <img
+                            id="templateUrl"
+                            src="${url}"
+                            style="
+                              max-height: 205px;
+                              object-fit: cover;
+                              float: left;
+                            "
+                            alt="profile picture"
+                          />
+                        </td>
+                        <td
+                          style="
+                            border-color: inherit;
+                            text-align: left;
+                            font-family: Arial, sans-serif;
+                            font-size: 14px;
+                            word-break: normal;
+                            padding-right: 15px;
+                            overflow: visible;
+                          "
+                          align="left"
+                        >
+                          <table
+                            style="
+                              border-collapse: collapse;
+                              border-spacing: 0;
+                              margin-left: -22px;
+                            "
+                          >
+                            <tbody>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <a
+                                    href="https://www.linkedin.com/company/study-advisor/"
+                                    target="_blank"
+                                    color="#6a78d1"
+                                    style="display: inline-block; padding: 0px"
+                                  >
+                                    <img
+                                      alt="linkedin"
+                                      color="#6a78d1"
+                                      height="35"
+                                      style="max-width: 135px; display: block"
+                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARGSURBVHgB5Zq/jxtVEMe/87zYsi+gQwqUaFOB0pwTKTQpuCtoaO4ikgiq80GXijQpCfkLgAYqOKcCJUF319BQXCJBRZG7AgQVm5T80Fn8uChne4eZ5x/srtf2rn3eW4uPZNnrXT+/77438+bNLOEYOFirLToOqlRAteCbJQZXQViUU27vGgYaxPBA5DH8fd/H/Wfv1e/jGCBMwV+Xa8sOmXWfeE0aWkz5cysMTNvw/Z2Fr+rbmJCJRPx9pVYzRDcRuNPHgOcz3zp1t15HSlKJ0DtfMLSJ4+18FK8Fvv7cneQjk0iEzvlS0cid5/eQGfTR0yP/1vPb9cbYK8ddcPBWzS35tIvZ3v1heE+PeEWEeKMuMqNOHlypVU9QgOKWirQrNlgdddHQkVABRaLdSbzODGiI0a+I0e/FnYwdCTuFiLZyIkBZFG+4Jbbpxp0cGImOEdNDnNwUGoXayLmosQ+MRMcL5VKA4nb7FyI0En++WVtzCrSFnNP2eSUYsoRGQgR8iIQY9yWYs6+AXjiNrOkuuH36I9ENJTaTNFK6ecMK6NH85DO0HnyHLBFvtdELUfoj0Y2FxlJ47WJIgOKsvw1aqCBLgv21ItQWkNCYowIUK6BSRsa4GsvpByui4JjVpL9sP/h24Dv+7Xd5/YGscQjr+m5t4p+rGwdpFjbn8iqc5YvWqP0ffsLRp59bISdAQ9aNM9QNr3cxp6i7dYzBMjJE7ce65YrY0eEhfO8xpqEgW2KZVmbJbhQTooZdvPZO6LvelLKNXjiHZ8RbBWl//xCteztw3ngdBXlR5T9PptOweXdHbG0yF00+lhzZ1Ltp96jRBS50XKkMnhfPVXr/BkgWyLi2itfeRevF01ZMWpioqt7JxYwxr55HnIAg6izM2ZcxARLhZhBu96YPqw3I1BvmyRxZSCfAdZARra+/QfP2F/3jaOiimAvnga5tpcEgA6zxBgQocfPfeq4Jwhcjy52HGcO/Dk4f/8ef4y9OH740DDPGpkSmZcaruSfTifcxxzDzI8OEPcwz0n/D7fkWodl102phz2an55OG7rVNJ/3B6df7HEDMNuls1wkZkjrmkCbB3nwropv+8DBfeL30fz/s0AJHkmwHP3qMI8luhJCYqN+OLGLR88O2rgPt2LaeIAna397nUBR+eHXjF+Q3+xfEq9zZPNM7CMVOstXbwBzAbb4ePA6JUNuQYfoYOUb7Fy1SDkSxzSY+QH6N3Fvo9C/EgAhdN8jwCvInxCMpfVFMDS92P1H+sq7l2Et5Wcm5Uym6VB5Suxu6KdLSkkSIeRgRj0eUupSxiY4nUvriE6ye6hQqT1M9VXRqaYkpa6+l/1eW/x0nQEmVcupWkrQQ42J2eLpepXl45f/3bEcUHRnJhUptg1YnfcpGtpbbLfZvT/PY0FQigmh2XZPTmtvV1Kh85UaEed1O77WNv687ylOyIaMEz26M41/4pb5mSQU8lgAAAABJRU5ErkJggg=="
+                                    />
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="17"
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <a
+                                    href="https://www.instagram.com/study__advisor/"
+                                    target="_blank"
+                                    color="#6a78d1"
+                                    style="display: inline-block; padding: 0px"
+                                  >
+                                    <img
+                                      alt="instagram"
+                                      color="#6a78d1"
+                                      height="35"
+                                      style="max-width: 135px; display: block"
+                                      src="data:image/png;base64,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"
+                                    />
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="17"
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  style="
+                                    font-family: Arial, sans-serif;
+                                    font-size: 14px;
+                                    overflow: hidden;
+                                    word-break: normal;
+                                  "
+                                >
+                                  <a
+                                    href="https://www.tiktok.com/@studyadvisor.officiel"
+                                    target="_blank"
+                                    color="#6a78d1"
+                                    style="display: inline-block; padding: 0px"
+                                  >
+                                    <img
+                                      alt="tiktok"
+                                      color="#6a78d1"
+                                      height="35"
+                                      style="max-width: 135px; display: block"
+                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAyCAYAAAD1CDOyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUNSURBVHgBzZoxbFNHGMf/d8+xY4dKRm1GwBtVOwCVmFoJZ+jSJUElgU5xyIaQEoamW2N3K0thYQMeG5BKpEO7MOBI7YTUuAMVbK90K1QJgjhxbL+P73tgy4mf7fPzs+OfZD373t3z+9/dd/fdd6fQBzamMslRIFmJIFVLUwqb5TKcw6v2JkJGIQRen8ukI1qfAVHaVTjJD022ykvApiYUXEVrrov8Bz/befRIYBEbFzKpUVfPuqDFdi9tgEOk8rtlN8et5CAAXYuQl4+SXlZEGYQMi7GDiDEW4fXzqF4IoeY7oqCy8fu3cub5DZDaj7nqEX9NYXA4pV2aMGkV3SnD9sz8bNRV6xisACEVi6r1ra8zU50ythVRPD+/QHDtfnefNiSVpR5sz1xcbpepZXcSASD3GoYFRVcS92zf9/EVsTWTmWLjeoAho+rShN+80iTigIzYlE029lP7jT2yP1c/BEQvXWxKK9+5C9oqokuSoyPqNl8nGhP3tMSb6UxGKy9TqMTv3WpK27n8LejF/wjEPvuoj07SjVjAMgaEdfozBIbUsky+tZ91EeIHYYB2YJ0+hR5IRqNYrP3wRIgqQvi+UDv0Jx8j8tWXCAqPngu11vBEjIxAZsUUBszI7De9CEnGYsjIF0+EBTWLA0KEyOilxj9CtyhXTXpXaRL2UTbQR/xGJz/cv5+i+uQZ6J/nqD5eNyrD88bhiGUhjSFB7EQ+7pOnxiKsKNJa6+EREQRe6qY128MJHAA732W9Gu8Vnq1TEV7YJ3uNFkgXUKkjsPiDRIJd4CJ2b3Swg60tlH64ymWPwzrzBaxPjwczbqVOiO+UQkDk5aOZC1DHjjbfvGFqzM+8T1leaCzBzzoCKnblUyUjQRc80UvzXIOfI0zEISQW1CXJjstTP/ohoBe6FjEyPTlUAoQIm7fDYbmUSWYxvMi5yaZ06cOVXx+iuva7515L3x4gToQIm6ajk27heZZyV0HO8/rvAIudwCiCw92J/jItEPERUfnt4R4Bg4aDea80KRRMC6jx8aa06tofOEiURl6zlDx6gHjSCkRxG2EgkXV9aMUuSLgdAZEJr+19mcV9CMluHHl/b4glojsmJaqP/2xKkyG33WjkN5qF4TMJHJnPy/W9CKyaFPITIcNu7PulJr9HhHmTok9AoBKSHVWB695/1RK2p+cesZGnOxWMLS+17EKyqKEXLz1BKnUUKtHcQnJ/5/ISeoWH1nx85bYXf6rP2BUio/0A8U5bOWgiTjxSz6tNJFqUv4kwaHzfugiJcYq6ToWlJku5H71rN5Dnnt/0PNZeYVuwG2Oye30ni+ZMRipy/vVm6UrerG+LIZeWsuHNKWXs6TVNHkfxfGaRI2w/wZD6ooaHUrGDGvTfS89GxIjDqP36c0G5sft2tjHN1216MzNncxMFCuOo8Q+Dx1g7PZu7UXzFntuf7uuKl3dpkbuVsTvSSL8EcBMURsu44nfLV4Ts+mtNZ/mrg+HAUWU6q1qcRmi5KIrftR2laSJoi4QGt0CcN1bibXZRjZYSvG9xjcP+CxgwLtH1sTKyqsN5EONozfsNGNm/SKHPyDCvFOVabTTup6uQ0zZvxLDrm1V9DECb1n4jgeJmYYt5d/KGVmUSiwc4pNJT8E/EVKtIy9aAifPYiNdl5MiQpl/GSrBVD+egQjnvVEPOPSkLJ7XLdqP0MZ6cGgJzyiG4r1wNh6ooHKqgoEI6wPUWgeYMYVuUd/oAAAAASUVORK5CYII="
+                                    />
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    word-break: normal;
+                    width: 100%;
+                    height: 0px;
+                    background-color: #f65560;
+                    margin: 0;
+                  "
+                  width="100%"
+                  height="0"
+                  bgcolor="#f65560"
+                ></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
